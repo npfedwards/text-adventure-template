@@ -1,0 +1,29 @@
+{
+  "name": "Text Adventure (TypeScript)",
+
+  // Node 22 LTS. Pinned so every student gets the identical runtime.
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+
+  // Install dependencies the moment the codespace is built, so students
+  // can press Run immediately without typing `npm install`.
+  "postCreateCommand": "npm install",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "files.autoSave": "afterDelay"
+      }
+    }
+  },
+
+  // Open the game's entry file so students land on something readable.
+  "postAttachCommand": "echo '\\n\\n  Type  npm start  to play your game.\\n\\n'",
+
+  "remoteUser": "node"
+}
